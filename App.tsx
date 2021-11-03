@@ -7,18 +7,11 @@ import { Icon } from 'react-native-elements'
 import { SafeAreaProvider } from 'react-native-safe-area-context'
 import { NavigationType } from './interfaces'
 import tw from 'tailwind-react-native-classnames'
+import Home from './components/Home'
 
 const Stack = createNativeStackNavigator()
 const Tab = createBottomTabNavigator()
 
-const Home = () => {
-  return (
-    <View style={tw`flex flex-row justify-between`}>
-      <Text style={tw`bg-red-400 text-white`}>home-screen home</Text>
-      <Text style={tw`bg-blue-400 text-white`}>home-screen home</Text>
-    </View>
-  )
-}
 const Search = () => {
   return (
     <View>
@@ -47,7 +40,7 @@ const Profile = () => {
     </View>
   )
 }
-const HomeScreen = ({ navigation }: { navigation: NavigationType }) => {
+const HomeScreen = () => {
   return (
     <Tab.Navigator>
       <Tab.Group
